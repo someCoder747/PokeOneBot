@@ -38,6 +38,6 @@ exports.conf = {
 
 exports.help = {
   name: 'userinfo',
-  description: 'Displays information on your discord account',
+  description: 'Displays information on your Discord Account',
   usage: 'userinfo'
 };

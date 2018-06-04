@@ -81,7 +81,7 @@ exports.conf =
 
 exports.help = {
     name: 'eggmove',
-    description: `Lists moves that can be learnt by given Pokemon by level`,
+    description: `Lists moves that can be learnt by given Pokemon by egg move tutoring`,
     usage: 'eggmove [pokemon name]'
 
 };

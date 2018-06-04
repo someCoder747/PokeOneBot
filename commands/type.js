@@ -146,7 +146,7 @@ exports.conf =
 
 exports.help = {
     name: 'type',
-    description: `Lists type advantages and disadvantages for given type`,
+    description: `Lists type advantages and disadvantages for given type, or type combination`,
     usage: 'type [type]'
 
 };
