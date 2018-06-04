@@ -1,0 +1,29 @@
+{
+  "name": "PokeOneBotHeroku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pokeone.js",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "moment": "^2.22.1",
+    "moment-duration-format": "^2.2.2",
+    "pm2": "^2.10.3",
+    "snekfetch": "^4.0.0",
+    "sqlite": "^2.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwanGooseHongFei/PokeOneBotHeroku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwanGooseHongFei/PokeOneBotHeroku/issues"
+  },
+  "homepage": "https://github.com/SwanGooseHongFei/PokeOneBotHeroku#readme"
+}
