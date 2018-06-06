@@ -38,11 +38,10 @@ exports.run = (client, message, args) => {
                 image = `http://api.gamernationnetwork.xyz/pokemon/poke/${body.info.national_id}.png`;
             }
         }
-
         var array = new Array();
-		for (let index = 0; index < body.info.move_learnsets.regular_learnset.length; index++) {
-            if (body.info.move_learnsets.regular_learnset[index].level != null) {
-                array[index] = "Lvl." + body.info.move_learnsets.regular_learnset[index].level + " - " + body.info.move_learnsets.regular_learnset[index].move;
+		for (let index = 0; index < body.info.move_learnsets[1].regular_learnset.length; index++) {
+            if (body.info.move_learnsets[1].regular_learnset[index].level != null) {
+                array[index] = "Lvl." + body.info.move_learnsets[1].regular_learnset[index].level + " - " + body.info.move_learnsets[1].regular_learnset[index].move;
             }
         }
 		

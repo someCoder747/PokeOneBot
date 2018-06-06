@@ -93,7 +93,7 @@ exports.run = (client, message, args) => {
             .setColor(0x0000C8)
             .addField("TM/HM List", tmList, true)
             .addField("\u200b", tmListTwo, true)
-            .setThumbnail(images)
+            .setThumbnail(image)
 
         message.channel.send("Gen 7 Pokemon may have wrong TM's HM's ATM!", {
             embed: embed

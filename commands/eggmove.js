@@ -40,19 +40,11 @@ exports.run = (client, message, args) => {
             }
         }
 
-        let number = 0;
-
-        for (let index = 0; index < 16; index++) {
-            if (body.info.move_learnsets[index].games[0] == "Ultra Sun") {
-                number = index;
-                break;
-            }
-        }
-
         var array = new Array();
-        for (let index = 0; index < body.info.move_learnsets[number].learnset.length; index++) {
-            if (body.info.move_learnsets[number].learnset[index].egg_move) {
-                array[index] = body.info.move_learnsets[number].learnset[index].move;
+
+		for (let index = 0; index < body.info.move_learnsets[1].regular_learnset.length; index++) {
+            if (body.info.move_learnsets[1].regular_learnset[index].egg_move != null) {
+                array[index] = body.info.move_learnsets[1].regular_learnset[index].move;
             }
         }
         if (array.length == 0) {
@@ -60,7 +52,7 @@ exports.run = (client, message, args) => {
         }
 
         const embed = new discord.RichEmbed()
-            .setTitle(`#${body.info.national_id} || ${body.info.names.en} || ${body.info.types.join('/')}`)
+            .setTitle(`#${body.info.national_id} || ${body.info.name} || ${body.info.types.join('/')}`)
             .setColor(0x0000C8)
             .addField("Egg Move List", array, true)
             .setThumbnail(image)
@@ -81,7 +73,7 @@ exports.conf =
 
 exports.help = {
     name: 'eggmove',
-    description: `Lists moves that can be learnt by given Pokemon by egg move tutoring`,
+    description: `Lists moves that can be learnt by given Pokemon by level`,
     usage: 'eggmove [pokemon name]'
 
 };
