@@ -39,24 +39,18 @@ exports.run = (client, message, args) => {
             }
         }
 
-        let number = 0;
-
-        for (let index = 0; index < 16; index++) {
-            if (body.info.move_learnsets[index].games[0] == "Sun") {
-                number = index;
-                break;
-            }
-        }
-
         var array = new Array();
-        for (let index = 0; index < body.info.move_learnsets[number].learnset.length; index++) {
-            if (body.info.move_learnsets[number].learnset[index].level != null) {
-                array[index] = "Lvl." + body.info.move_learnsets[number].learnset[index].level + " - " + body.info.move_learnsets[number].learnset[index].move;
+		for (let index = 0; index < body.info.move_learnsets.regular_learnset.length; index++) {
+            if (body.info.move_learnsets.regular_learnset[index].level != null) {
+                array[index] = "Lvl." + body.info.move_learnsets.regular_learnset[index].level + " - " + body.info.move_learnsets.regular_learnset[index].move;
             }
         }
+		
         if (array.length == 0) {
             var array = "API error"
         }
+		
+		
 
         const embed = new discord.RichEmbed()
             .setTitle(`#${body.info.national_id} || ${body.info.name} || ${body.info.types.join('/')}`)

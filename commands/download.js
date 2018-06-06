@@ -19,7 +19,7 @@ exports.run = (client, message, params) => {
     }).catch(console.error)
 */
 
-message.channel.send(`you should <#366714491582283778>`)
+message.channel.send(`Download for P1 not yet available. You should <#366714491582283778>`)
 
 };
 
