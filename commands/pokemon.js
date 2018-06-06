@@ -148,24 +148,6 @@ exports.run = async (client, message, args) => {
             id = "0" + id;
         }
 
-        var image;
-        if (body.info.custom_image) {
-            image = body.info.custom_image;
-        } else {
-            if (body.info.national_id < 10) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/00${body.info.national_id}.gif`;
-            }
-            if (body.info.national_id >= 10 & body.info.national_id < 100) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/0${body.info.national_id}.gif`;
-            } else 
-            if (body.info.national_id >= 100 & body.info.national_id <= 721){
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/${body.info.national_id}.gif`;
-            } else
-            if (body.info.national_id >= 722) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/${body.info.national_id}.png`;
-            }
-        }
-
         var eggGroup = body.info.egg_groups;
         var genderRatios = new Array();
 
@@ -184,7 +166,7 @@ exports.run = async (client, message, args) => {
             embed.addField(`__${body.info.encoder[2]}:__`, abilities, false)
             embed.addField(`__${body.info.encoder[3]}:__`, prevolution, false)
             embed.addField(`__${body.info.encoder[4]}:__`, evolutions, true)
-            embed.setThumbnail(image);
+            //embed.setThumbnail();
         } else {
             embed.setTitle(`#${body.info.national_id} || ${body.info.name} || ${body.info.types.join('/')}`)
             embed.setColor(0x0000C8)
@@ -196,7 +178,7 @@ exports.run = async (client, message, args) => {
             embed.addField(`__Egg Group:__`, eggGroup, true)
             embed.addField("__Evolves From:__", prevolution, true)
             embed.addField("__Evolves Into:__", evolutions, false)
-            embed.setThumbnail(image);
+            embed.setThumbnail(`http://play.pokemonshowdown.com/sprites/xyani/${(body.info.name).toLowerCase()}.gif`);
         }
         message.channel.send("", {
             embed: embed

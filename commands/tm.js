@@ -23,24 +23,6 @@ exports.run = (client, message, args) => {
             return message.channel.send(`Pokemon: ${search} not found. Please double check spelling!`);
         }
 
-        var image;
-        if (body.info.custom_image) {
-            image = body.info.custom_image;
-        } else {
-            if (body.info.national_id < 10) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/00${body.info.national_id}.gif`;
-            }
-            if (body.info.national_id >= 10 & body.info.national_id < 100) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/0${body.info.national_id}.gif`;
-            } else 
-            if (body.info.national_id >= 100 & body.info.national_id <= 721){
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/${body.info.national_id}.gif`;
-            } else
-            if (body.info.national_id >= 722) {
-                image = `http://api.gamernationnetwork.xyz/pokemon/poke/${body.info.national_id}.png`;
-            }
-        }
-
         var tmList = new Array();
 
         const hms = new Array();
@@ -93,7 +75,7 @@ exports.run = (client, message, args) => {
             .setColor(0x0000C8)
             .addField("TM/HM List", tmList, true)
             .addField("\u200b", tmListTwo, true)
-            .setThumbnail(image)
+            .setThumbnail(`http://play.pokemonshowdown.com/sprites/xyani/${(body.info.name).toLowerCase()}.gif`);
 
         message.channel.send("Gen 7 Pokemon may have wrong TM's HM's ATM!", {
             embed: embed
