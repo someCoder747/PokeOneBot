@@ -5,8 +5,6 @@ const settings = require('./settings.json');
 const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
-const sql = require("sqlite");
-sql.open("./pokeone.sqlite3");
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
