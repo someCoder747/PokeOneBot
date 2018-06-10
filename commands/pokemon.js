@@ -7,8 +7,14 @@ exports.run = async (client, message, args) => {
     if (!args[0]) {
         return message.channel.send(`Please input a Pokemon - use **${settings.prefix}help pokemon** for more info!`);
     }
-    const search = args.splice(0, args.length).join(" ").toLowerCase()
-
+    var search = args.splice(0, args.length);
+	var isShiny = false;
+	if(search[0].toLowerCase() == "shiny"){
+		search.splice(0, 1);
+		isShiny = true;
+	}
+	search.join(" ").toLowerCase();
+	
     const api = settings.api.url
     const route = "/pokemon/"
     const token = settings.api.token
@@ -178,7 +184,12 @@ exports.run = async (client, message, args) => {
             embed.addField(`__Egg Group:__`, eggGroup, true)
             embed.addField("__Evolves From:__", prevolution, true)
             embed.addField("__Evolves Into:__", evolutions, false)
-            embed.setThumbnail(`http://play.pokemonshowdown.com/sprites/xyani/${(body.info.name).toLowerCase()}.gif`);
+			if(isShiny){
+				embed.setThumbnail(settings.shinyImages + `${(body.info.name).toLowerCase().replace(/\W/g, '')}.gif`);
+			} else {
+				embed.setThumbnail(settings.images + `${(body.info.name).toLowerCase().replace(/\W/g, '')}.gif`);
+			}
+            
         }
         message.channel.send("", {
             embed: embed
