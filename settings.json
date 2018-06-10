@@ -19,7 +19,7 @@
 	"prefix": "!",
 	"token": "NDUyOTk0MzE1NTYwNjgxNDk1.DfYbWw.YmjBJWj1jBedHrVDHQm9DnuBWAo",
 	"api": {	
-		"url": "http://pokeonebot-pokeoneapi.193b.starter-ca-central-1.openshiftapps.com/private",
+		"url": "https://lit-gorge-54456.herokuapp.com/private",
         "token": "?token=H6gNiJWORoCTcbP8vQpJ"
     },
 	"images": "http://play.pokemonshowdown.com/sprites/xyani/",
