@@ -19,7 +19,7 @@
 	"prefix": "!",
 	"token": "NDUyOTk0MzE1NTYwNjgxNDk1.DfYbWw.YmjBJWj1jBedHrVDHQm9DnuBWAo",
 	"api": {	
-		"url": "http://pokeonetrueapi-pokeoneapi22.193b.starter-ca-central-1.openshiftapps.com/private",
+		"url": "http://api-unofficialp1bot.193b.starter-ca-central-1.openshiftapps.com/private",
         "token": "?token=H6gNiJWORoCTcbP8vQpJ"
     },
 	"images": "http://play.pokemonshowdown.com/sprites/xyani/",
