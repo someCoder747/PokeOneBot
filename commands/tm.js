@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 		search.splice(0, 1);
 		isShiny = true;
 	}
-	search.join(" ").toLowerCase();
+	search = search.join(" ").toLowerCase();
     const api = settings.api.url
     const route = "/pokemon/"
     const token = settings.api.token
