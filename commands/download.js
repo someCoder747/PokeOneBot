@@ -1,4 +1,4 @@
-const settings = require('../settings.json');
+﻿const settings = require('../settings.json');
 const discord = require("discord.js");
 exports.run = (client, message, params) => {
   
@@ -19,7 +19,7 @@ exports.run = (client, message, params) => {
     }).catch(console.error)
 */
 
-message.channel.send(`Download for P1 not yet available. You should <#366714491582283778>`)
+message.channel.send(`Download link is available at <#366638077776494623>`)
 
 };
 

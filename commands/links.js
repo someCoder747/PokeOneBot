@@ -5,7 +5,7 @@ exports.run = (client, message, params) => {
 
 const embed = new discord.RichEmbed()
   .setTitle("Unofficial PokéOne Bot Links")
-  .addField("Links", `**Discord:** [Server Link](https://discord.gg/fU9c4k7)\n**Bot Invite:** [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=452994315560681495&permissions=0&scope=bot)\n**Github:** [Repository Link](https://github.com/SwanGooseHongFei/PokeOneBot`, true)
+  .addField("Links", `**Discord:** [Server Link](https://discord.gg/fU9c4k7)\n**Bot Invite:** [Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=452994315560681495&permissions=0&scope=bot)\n**Github:** [Repository Link](https://github.com/SwanGooseHongFei/PokeOneBot)`, true)
 
 
   message.channel.send("", {
