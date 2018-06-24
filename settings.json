@@ -17,7 +17,8 @@
 		"210667541377318914"
 	],
 	"prefix": "!",
-	"token": "NDUyOTk0MzE1NTYwNjgxNDk1.DfYbWw.YmjBJWj1jBedHrVDHQm9DnuBWAo",
+	"token": "Hidden",
+	/*Token hidden. Save externally and use when hosting*/
 	"api": {	
 		"url": "http://api-unofficialp1bot.193b.starter-ca-central-1.openshiftapps.com/private",
         "token": "?token=H6gNiJWORoCTcbP8vQpJ"
